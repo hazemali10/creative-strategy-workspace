@@ -11,4 +11,4 @@ The Eugene Schwartz reference. Every awareness call, sophistication call, and pe
 
 The summary is a map, not the territory. **Buy Breakthrough Advertising and read it - more than once.** The book is copyrighted, so it does not ship in this workspace.
 
-Once you own a PDF copy, drop it into this folder as `breakthrough_advertising_book.pdf` - git ignores it, so it stays on your machine only, and Claude can then read the full text when you want to go deeper than the summary (ask it to pull the exact chapter you're working from).
+Once you own a PDF copy, drop it into this folder as `breakthrough_advertising_book.pdf` - git ignores it, so it stays on your machine only, and your agent can then read the full text when you want to go deeper than the summary (ask it to pull the exact chapter you're working from).

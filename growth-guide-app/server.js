@@ -157,7 +157,7 @@ function readDocs(slug) {
       const st = fs.statSync(p);
       docs[key] = { updated: st.mtime.toISOString().slice(0, 10), md: fs.readFileSync(p, 'utf8') };
     } catch {
-      docs[key] = { updated: todayIso(), md: `# Not created yet\n\nThis document does not exist for this brand yet. Open Claude Code and run **/new-brand** (or the standalone skill for this doc) to generate \`${rel}\`.` };
+      docs[key] = { updated: todayIso(), md: `# Not created yet\n\nThis document does not exist for this brand yet. Open your AI coding agent and run **/new-brand** (or the standalone skill for this doc) to generate \`${rel}\`.` };
     }
   }
   return docs;
@@ -182,7 +182,7 @@ function loadBrand(slug) {
 const RESOURCES_DIR = path.join(ROOT, 'resources');
 // The app surfaces only the playbooks (learnings + iteration) and the
 // copywriting guides - Karlo's call. The rest of resources/ stays
-// Claude-side by design.
+// agent-side by design.
 const LIB_GROUPS = [
   { group: 'Playbooks', e: '📖', dir: '.' },
   { group: 'Copywriting', e: '✍️', dir: 'copywriting' },

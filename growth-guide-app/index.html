@@ -465,7 +465,7 @@ const resChip=r=>r?`<span class="res" style="color:${RSC[r]};background:${tint(R
 
 function renderHome(){
   if(!brands.length){
-    document.getElementById('brandlist').innerHTML='<div class="anote" style="padding:22px;background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);font-size:13.5px;line-height:1.6">No brands yet. Open Claude Code in this workspace and run <b style="color:var(--text)">/new-brand</b> - it builds the research, the avatars, the desires, and the growth guide, and the brand shows up here.</div>';
+    document.getElementById('brandlist').innerHTML='<div class="anote" style="padding:22px;background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);font-size:13.5px;line-height:1.6">No brands yet. Open your AI coding agent in this workspace and run <b style="color:var(--text)">/new-brand</b> - it builds the research, the avatars, the desires, and the growth guide, and the brand shows up here.</div>';
     return;
   }
   document.getElementById('brandlist').innerHTML=brands.map(b=>{

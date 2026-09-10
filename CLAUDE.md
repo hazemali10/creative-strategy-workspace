@@ -2,7 +2,7 @@
 
 This is your creative strategy workspace. It is where you research brands, come up with ad ideas, write copy and scripts, brief editors, and learn from every ad you run - all in one place, with AI doing the grunt work while you do the thinking.
 
-You run this inside Claude Code (in VS Code). To use a skill, type its slash command (like `/new-brand`). Claude reads the instructions in that skill and executes them.
+You run this inside an AI coding agent that reads `AGENTS.md` or skills - Claude Code, opencode, Cursor, and others. To use a skill, type its slash command (like `/new-brand`) or just ask; the agent reads the instructions in that skill and executes them.
 
 **First time here? Just type `start`.** It interviews you so this workspace knows who it belongs to, sets up your tools one by one, and takes you to your first brand.
 
@@ -22,17 +22,17 @@ CONTEXT.md       -> the local guide (one per zone: every brand, the resources KB
 Skills           -> the workflows (loaded only when invoked)
 ```
 
-Context lives at the right level: true for the whole workspace goes in this CLAUDE.md, true for one brand goes in that brand's CONTEXT.md, true for one workflow goes in the skill. When you work on a brand, Claude reads this map plus that brand's CONTEXT.md - everything else stays available but not active. And whenever the territory changes - a folder created, a doc added, scope shifted, something learned about the brand - the affected maps get updated in the same action. Claude maintains this automatically. A map that lies is worse than no map.
+Context lives at the right level: true for the whole workspace goes in this CLAUDE.md, true for one brand goes in that brand's CONTEXT.md, true for one workflow goes in the skill. When you work on a brand, the agent reads this map plus that brand's CONTEXT.md - everything else stays available but not active. And whenever the territory changes - a folder created, a doc added, scope shifted, something learned about the brand - the affected maps get updated in the same action. The agent maintains this automatically. A map that lies is worse than no map.
 
 The pattern also scales: if you ever add a whole new area of work to this workspace, it gets its own folder, its own CONTEXT.md, and a row in the map below - same three layers, one level deeper. But be honest with yourself before you do: new zones are usually shiny-object distractions. The money is in the brands.
 
-**5. Teach as you go.** Most people using this workspace are beginners, and a beginner who cannot tell what is happening stops trusting the tool. So Claude never just does things. It explains, asks, then does:
+**5. Teach as you go.** Most people using this workspace are beginners, and a beginner who cannot tell what is happening stops trusting the tool. So your agent never just does things. It explains, asks, then does:
 
 - **Before every step:** what is about to happen, why it matters, what it produces, and where that lands in the workspace (name the file). Then ask before proceeding - a simple "ready?" is enough. Never start a phase silently.
 - **Define every term the first time it shows up** - API key, connector, MCP, slug, verdict. One plain sentence, in context, then move on.
 - **Announce before installing anything.** If a step needs a helper tool (a Python package to read a spreadsheet, a scraper's browser), say what it is and why in one line BEFORE installing, and confirm it landed after. Nothing gets installed silently.
 - **Format for a beginner reading a screen:** short paragraphs, a line break between ideas, a small ASCII map whenever you explain a structure or a sequence, bold on the words that matter. Never a wall of text - when a message would run long, split it and check in.
-- **Lead with what the student gets,** not with what Claude did. "Your avatar doc is ready at research/avatars.md - seven profiles, each built from real quotes" beats a log of steps.
+- **Lead with what the student gets,** not with what the agent did. "Your avatar doc is ready at research/avatars.md - seven profiles, each built from real quotes" beats a log of steps.
 
 Every skill inherits this. When a skill's own instructions and this behavior disagree about how to talk to the user, this behavior wins.
 
@@ -48,6 +48,8 @@ Every skill inherits this. When a skill's own instructions and this behavior dis
 | `resources/` | The knowledge base every skill pulls from - marketing fundamentals, Breakthrough Advertising, the copywriting guides, real winning-ad case studies, the learnings + iteration playbooks, plus a few grab-and-use prompts (comment miner, idea generators). |
 | `.claude/skills/` | Your tools. See below. |
 
+`AGENTS.md` is a symlink to this file - agents that read `AGENTS.md` instead of `CLAUDE.md` (most do) get the same map. Edit `CLAUDE.md`; the mirror follows.
+
 ## Your skills
 
 | Skill | What it does |
@@ -59,13 +61,13 @@ Every skill inherits this. When a skill's own instructions and this behavior dis
 | `/desires` | Identify the brand's mass desires from the research and write the desire doc. |
 | `/growth-guide` | Finalize the brand's growth guide - the idea bank + concept pipeline that tracks every ad from idea to learning. |
 | `/video-copy` | Write a first-draft video ad script from your research and chosen claims. |
-| `/watch-video` | Claude actually watches a video (link or file): frames, transcript, pacing, feel. Quick answers, or full teardown docs saved to the brand. |
+| `/watch-video` | The agent actually watches a video (link or file): frames, transcript, pacing, feel. Quick answers, or full teardown docs saved to the brand. |
 | `/research-pulse` | The weekly sweep: new Reddit threads, competitor ads, popping content, fresh reviews and comments. Raw findings filed by source, a dated brief with idea sparks. |
 | `/static-copy` | Write first-draft static ad copy from your research and chosen claims. |
 
 Every draft-writing skill reads the manifesto and the brand's research first, and hands you a draft to take out and assemble yourself. None of them ship a finished ad.
 
-**Ideas need no skill.** Just say "add [idea] to the idea bank for [brand]" and Claude appends it to the Idea Bank section of that brand's `growth-guide.md` as `- DD-MM-YYYY · <the idea>`. The thinking gate comes at promotion: an idea only becomes a concept card with its memo (what / why / how) filled in - by you.
+**Ideas need no skill.** Just say "add [idea] to the idea bank for [brand]" and the agent appends it to the Idea Bank section of that brand's `growth-guide.md` as `- DD-MM-YYYY · <the idea>`. The thinking gate comes at promotion: an idea only becomes a concept card with its memo (what / why / how) filled in - by you.
 
 ## Each brand's folder
 

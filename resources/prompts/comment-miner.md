@@ -2,7 +2,7 @@
 
 # **Comment Miner Prompt**
 
-Hey Claude, I just copied the Facebook/Instagram comment section under one of our ads and I need you to analyze these comments for me. Please:
+Hey, I just copied the Facebook/Instagram comment section under one of our ads and I need you to analyze these comments for me. Please:
 
 ## **Organization Instructions**
 
